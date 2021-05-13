@@ -38,5 +38,5 @@ Installing dependencies with the help of npm:
 now run command "node server.js"
 
 
-If there is no problem then in terminal it will output the port no. on which application is running abd by default it is port no. 600
+If there is no problem then in terminal it will output the port no. on which application is running by default it is port no. 600
 So to access the webpage check this [url](http://localhost:600/)
