@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script> function load(a){
+    a++;
+    
+
+  }
+  </script>
+
+  <title>Url Shortner</title>
+</head>
+
+<body>
+  <h1 class="h1 text-center">URL Shortner</h1>
+  <div class="container">
+    <form action="/api/url/shorten" method="POST" enctype="application/json">
+      <div class="form-group">
+        <label>Input URL</label>
+        <input type="text" class="form-control" id="longUrl" name="longUrl" placeholder="enter any link URL shrink">
+        <button type="submit" class="btn btn-success mt-4">Submit</button>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Full URL</th>
+              <th scope="col">Tiny URL</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <% let num=1 %> 
+            <% url.forEach(url => { %>
+              
+              <tr>
+                <td><%= num %> </td>
+               
+                <td><a href="<%= url.longUrl %>"><%= url.longUrl %></a></td>
+                <td><a href="<%= url.shortUrl %>"><%= url.shortUrl %></a></td>
+                
+              </tr>
+            <% num++ }) %>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
