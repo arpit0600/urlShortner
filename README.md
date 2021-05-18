@@ -1,5 +1,5 @@
 # urlShortner
-Repo for a Url Shortner service ame with Express.js backend using mongoDb as DB
+Repo for a Url Shortner service ame with Express.js backend using mongoDB as DB
 
 
 Software Installation:
